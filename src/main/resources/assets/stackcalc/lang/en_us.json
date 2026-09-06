@@ -1,0 +1,25 @@
+{
+  "key.stackcalc.open": "Open calculator",
+  "key.categories.stackcalc.main": "Stack Calc",
+
+  "stackcalc.gui.input": "expression",
+  "stackcalc.gui.placeholder": "try: 5s + 12   or   2h - 3s",
+  "stackcalc.gui.copy": "enter: copy to clipboard",
+  "stackcalc.gui.copied": "copied!",
+
+  "stackcalc.unit.shulker": "%s shulker",
+  "stackcalc.unit.stack": "%s stack",
+  "stackcalc.unit.item": "%s item",
+  "stackcalc.unit.zero": "0 items",
+
+  "stackcalc.error.generic": "Invalid expression",
+  "stackcalc.error.unexpected_char": "Unexpected character: '%s'",
+  "stackcalc.error.invalid_result": "Result is not a valid number",
+  "stackcalc.error.div_zero": "Division by zero",
+  "stackcalc.error.mod_zero": "Modulo by zero",
+  "stackcalc.error.missing_paren": "Missing closing parenthesis",
+  "stackcalc.error.expected_number": "A number is expected here",
+  "stackcalc.error.malformed_number": "Malformed number",
+
+  "stackcalc.command.error": "Invalid expression: %s"
+}

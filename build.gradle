@@ -1,0 +1,54 @@
+plugins {
+	// fabric-loom (senza -remap) e' quello per le versioni NON offuscate: 26.1 e successive
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+	id 'java'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	// Niente riga "mappings" e niente "modImplementation": la 26.x non e' offuscata,
+	// quindi il plugin fabric-loom (senza -remap) non crea le configurazioni di remap.
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(25)
+	}
+	withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = 'UTF-8'
+	it.options.release = 25
+}
+
+processResources {
+	inputs.property 'version', project.version
+	inputs.property 'minecraft_version', project.minecraft_version
+	inputs.property 'loader_version', project.loader_version
+
+	filesMatching('fabric.mod.json') {
+		expand version: project.version,
+				minecraft_version: project.minecraft_version,
+				loader_version: project.loader_version
+	}
+}
+
+jar {
+	from('LICENSE') {
+		rename { "${it}_${project.base.archivesName.get()}" }
+	}
+}

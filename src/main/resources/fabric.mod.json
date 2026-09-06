@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "stackcalc",
+  "version": "${version}",
+  "name": "Stack Calc",
+  "description": "In-game calculator that turns any number into shulker boxes, stacks and leftover items. Supports unit suffixes like 5s or 2h, colored syntax highlighting and a client-side /stack command.",
+  "authors": [
+    "Davide"
+  ],
+  "contact": {
+    "homepage": "https://github.com/davidesidoti/stackcalc",
+    "sources": "https://github.com/davidesidoti/stackcalc",
+    "issues": "https://github.com/davidesidoti/stackcalc/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/stackcalc/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "it.davide.stackcalc.client.StackCalcClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=25",
+    "fabric-api": ">=0.159.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "key.stackcalc.open": "Apri calcolatrice",
+  "key.categories.stackcalc.main": "Stack Calc",
+
+  "stackcalc.gui.input": "espressione",
+  "stackcalc.gui.placeholder": "prova: 5s + 12   oppure   2h - 3s",
+  "stackcalc.gui.copy": "invio: copia negli appunti",
+  "stackcalc.gui.copied": "copiato!",
+
+  "stackcalc.unit.shulker": "%s shulker",
+  "stackcalc.unit.stack": "%s stack",
+  "stackcalc.unit.item": "%s item",
+  "stackcalc.unit.zero": "0 item",
+
+  "stackcalc.error.generic": "Espressione non valida",
+  "stackcalc.error.unexpected_char": "Carattere inatteso: '%s'",
+  "stackcalc.error.invalid_result": "Il risultato non e' un numero valido",
+  "stackcalc.error.div_zero": "Divisione per zero",
+  "stackcalc.error.mod_zero": "Modulo per zero",
+  "stackcalc.error.missing_paren": "Manca una parentesi chiusa",
+  "stackcalc.error.expected_number": "Qui ci vuole un numero",
+  "stackcalc.error.malformed_number": "Numero malformato",
+
+  "stackcalc.command.error": "Espressione non valida: %s"
+}
